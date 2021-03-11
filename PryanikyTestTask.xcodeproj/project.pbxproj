@@ -13,6 +13,10 @@
 		CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */; };
 		CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD9925FA3EDD00274A95 /* MainViewController.xib */; };
 		CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */; };
+		CE20DDA425FA422800274A95 /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA325FA422800274A95 /* TextBlock.swift */; };
+		CE20DDA825FA423400274A95 /* PictureBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA725FA423400274A95 /* PictureBlock.swift */; };
+		CE20DDAB25FA424400274A95 /* SelectorBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAA25FA424400274A95 /* SelectorBlock.swift */; };
+		CE20DDAE25FA444600274A95 /* ViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAD25FA444600274A95 /* ViewDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CE20DD8A25FA25A900274A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE20DD9925FA3EDD00274A95 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE20DDA325FA422800274A95 /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
+		CE20DDA725FA423400274A95 /* PictureBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBlock.swift; sourceTree = "<group>"; };
+		CE20DDAA25FA424400274A95 /* SelectorBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorBlock.swift; sourceTree = "<group>"; };
+		CE20DDAD25FA444600274A95 /* ViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			children = (
 				CE20DD7C25FA25A800274A95 /* AppDelegate.swift */,
 				CE20DD9525FA291500274A95 /* Modules */,
+				CE20DDA225FA41F100274A95 /* Models */,
 				CE20DD9725FA292100274A95 /* Supporting Files */,
 				CE20DD9425FA28FA00274A95 /* Resources */,
 			);
@@ -97,6 +106,17 @@
 				CE20DD9925FA3EDD00274A95 /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CE20DDA225FA41F100274A95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDAD25FA444600274A95 /* ViewDataModel.swift */,
+				CE20DDA325FA422800274A95 /* TextBlock.swift */,
+				CE20DDA725FA423400274A95 /* PictureBlock.swift */,
+				CE20DDAA25FA424400274A95 /* SelectorBlock.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE20DDAB25FA424400274A95 /* SelectorBlock.swift in Sources */,
+				CE20DDAE25FA444600274A95 /* ViewDataModel.swift in Sources */,
 				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
+				CE20DDA425FA422800274A95 /* TextBlock.swift in Sources */,
 				CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */,
+				CE20DDA825FA423400274A95 /* PictureBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
