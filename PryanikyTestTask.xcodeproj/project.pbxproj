@@ -13,13 +13,14 @@
 		CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */; };
 		CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD9925FA3EDD00274A95 /* MainViewController.xib */; };
 		CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */; };
-		CE20DDA425FA422800274A95 /* TextBlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA325FA422800274A95 /* TextBlockData.swift */; };
-		CE20DDA825FA423400274A95 /* PictureBlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA725FA423400274A95 /* PictureBlockData.swift */; };
-		CE20DDAB25FA424400274A95 /* SelectorBlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAA25FA424400274A95 /* SelectorBlockData.swift */; };
-		CE20DDAE25FA444600274A95 /* ViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAD25FA444600274A95 /* ViewDataModel.swift */; };
+		CE20DDA425FA422800274A95 /* BlockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA325FA422800274A95 /* BlockType.swift */; };
+		CE20DDA825FA423400274A95 /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA725FA423400274A95 /* BlockData.swift */; };
+		CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */; };
+		CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAD25FA444600274A95 /* DataModel.swift */; };
 		CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDB625FA52D100274A95 /* NetworkService.swift */; };
 		CE20DDBB25FA536500274A95 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDBA25FA536500274A95 /* RequestService.swift */; };
 		CE20DDBE25FA53E900274A95 /* DataTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDBD25FA53E900274A95 /* DataTaskService.swift */; };
+		CE20DDC325FAA50E00274A95 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDC225FAA50E00274A95 /* Block.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +32,14 @@
 		CE20DD8A25FA25A900274A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE20DD9925FA3EDD00274A95 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		CE20DDA325FA422800274A95 /* TextBlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlockData.swift; sourceTree = "<group>"; };
-		CE20DDA725FA423400274A95 /* PictureBlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBlockData.swift; sourceTree = "<group>"; };
-		CE20DDAA25FA424400274A95 /* SelectorBlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorBlockData.swift; sourceTree = "<group>"; };
-		CE20DDAD25FA444600274A95 /* ViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataModel.swift; sourceTree = "<group>"; };
+		CE20DDA325FA422800274A95 /* BlockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockType.swift; sourceTree = "<group>"; };
+		CE20DDA725FA423400274A95 /* BlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockData.swift; sourceTree = "<group>"; };
+		CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorBlockDataVariant.swift; sourceTree = "<group>"; };
+		CE20DDAD25FA444600274A95 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CE20DDB625FA52D100274A95 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CE20DDBA25FA536500274A95 /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		CE20DDBD25FA53E900274A95 /* DataTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskService.swift; sourceTree = "<group>"; };
+		CE20DDC225FAA50E00274A95 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +120,11 @@
 		CE20DDA225FA41F100274A95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE20DDAD25FA444600274A95 /* ViewDataModel.swift */,
-				CE20DDA325FA422800274A95 /* TextBlockData.swift */,
-				CE20DDA725FA423400274A95 /* PictureBlockData.swift */,
-				CE20DDAA25FA424400274A95 /* SelectorBlockData.swift */,
+				CE20DDAD25FA444600274A95 /* DataModel.swift */,
+				CE20DDC225FAA50E00274A95 /* Block.swift */,
+				CE20DDA325FA422800274A95 /* BlockType.swift */,
+				CE20DDA725FA423400274A95 /* BlockData.swift */,
+				CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,16 +209,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE20DDAB25FA424400274A95 /* SelectorBlockData.swift in Sources */,
+				CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */,
+				CE20DDC325FAA50E00274A95 /* Block.swift in Sources */,
 				CE20DDBB25FA536500274A95 /* RequestService.swift in Sources */,
-				CE20DDAE25FA444600274A95 /* ViewDataModel.swift in Sources */,
+				CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */,
 				CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */,
 				CE20DDBE25FA53E900274A95 /* DataTaskService.swift in Sources */,
 				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
-				CE20DDA425FA422800274A95 /* TextBlockData.swift in Sources */,
+				CE20DDA425FA422800274A95 /* BlockType.swift in Sources */,
 				CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */,
-				CE20DDA825FA423400274A95 /* PictureBlockData.swift in Sources */,
+				CE20DDA825FA423400274A95 /* BlockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

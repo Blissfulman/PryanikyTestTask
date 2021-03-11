@@ -37,24 +37,25 @@ final class MainViewController: UIViewController {
             switch result {
             case .success(let model):
                 print()
-                model.order.forEach { block in
-                    guard let blockData = model.blocks.first { $0.type == block }?.data else { return }
+                model.order.forEach { blockType in
+                    guard let blockData = model.blocks.first(where: { $0.type == blockType })?.data else { return }
 
                     switch blockData {
-                    case .text(data: let data):
-                        print(data.text!)
-                    case .picture(data: let data):
-                        print(data.text!, data.url!)
-                    case .selector(data: let data):
-                        print(data.selectedID!)
-                        print(data.variants!)
+                    case let .text(text):
+                        print(text!)
+                    case let .picture(text, url):
+                        print(text!, url!)
+                    case let .selector(selectedID, variants):
+                        print(selectedID!)
+                        variants.forEach {
+                            print($0.id!, $0.text!)
+                        }
                     }
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        
     }
     
     // MARK: - Private methods
