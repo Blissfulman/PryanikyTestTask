@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD7C25FA25A800274A95 /* AppDelegate.swift */; };
-		CE20DD7F25FA25A800274A95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD7E25FA25A800274A95 /* SceneDelegate.swift */; };
 		CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD8025FA25A800274A95 /* ViewController.swift */; };
-		CE20DD8425FA25A800274A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8225FA25A800274A95 /* Main.storyboard */; };
 		CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8525FA25A900274A95 /* Assets.xcassets */; };
 		CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		CE20DD7925FA25A800274A95 /* PryanikyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PryanikyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20DD7C25FA25A800274A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE20DD7E25FA25A800274A95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE20DD8025FA25A800274A95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE20DD8325FA25A800274A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE20DD8525FA25A900274A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE20DD8825FA25A900274A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE20DD8A25FA25A900274A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,14 +53,36 @@
 			isa = PBXGroup;
 			children = (
 				CE20DD7C25FA25A800274A95 /* AppDelegate.swift */,
-				CE20DD7E25FA25A800274A95 /* SceneDelegate.swift */,
-				CE20DD8025FA25A800274A95 /* ViewController.swift */,
-				CE20DD8225FA25A800274A95 /* Main.storyboard */,
+				CE20DD9525FA291500274A95 /* Modules */,
+				CE20DD9725FA292100274A95 /* Supporting Files */,
+				CE20DD9425FA28FA00274A95 /* Resources */,
+			);
+			path = PryanikyTestTask;
+			sourceTree = "<group>";
+		};
+		CE20DD9425FA28FA00274A95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				CE20DD8525FA25A900274A95 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE20DD9525FA291500274A95 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DD8025FA25A800274A95 /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE20DD9725FA292100274A95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */,
 				CE20DD8A25FA25A900274A95 /* Info.plist */,
 			);
-			path = PryanikyTestTask;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +144,6 @@
 			files = (
 				CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */,
 				CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */,
-				CE20DD8425FA25A800274A95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,21 +156,12 @@
 			files = (
 				CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
-				CE20DD7F25FA25A800274A95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE20DD8225FA25A800274A95 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE20DD8325FA25A800274A95 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J6378W446;
-				INFOPLIST_FILE = PryanikyTestTask/Info.plist;
+				INFOPLIST_FILE = "PryanikyTestTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.EvgenyNovgorodov.PryanikyTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J6378W446;
-				INFOPLIST_FILE = PryanikyTestTask/Info.plist;
+				INFOPLIST_FILE = "PryanikyTestTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.EvgenyNovgorodov.PryanikyTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
