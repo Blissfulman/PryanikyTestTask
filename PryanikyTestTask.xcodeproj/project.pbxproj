@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD7C25FA25A800274A95 /* AppDelegate.swift */; };
-		CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD8025FA25A800274A95 /* ViewController.swift */; };
+		CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD8025FA25A800274A95 /* MainViewController.swift */; };
 		CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8525FA25A900274A95 /* Assets.xcassets */; };
 		CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */; };
+		CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD9925FA3EDD00274A95 /* MainViewController.xib */; };
+		CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE20DD7925FA25A800274A95 /* PryanikyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PryanikyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20DD7C25FA25A800274A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE20DD8025FA25A800274A95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE20DD8025FA25A800274A95 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE20DD8525FA25A900274A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE20DD8825FA25A900274A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE20DD8A25FA25A900274A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE20DD9925FA3EDD00274A95 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 		CE20DD9525FA291500274A95 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				CE20DD8025FA25A800274A95 /* ViewController.swift */,
+				CE20DDA025FA3FA600274A95 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -83,6 +87,16 @@
 				CE20DD8A25FA25A900274A95 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE20DDA025FA3FA600274A95 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DD8025FA25A800274A95 /* MainViewController.swift */,
+				CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */,
+				CE20DD9925FA3EDD00274A95 /* MainViewController.xib */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */,
+				CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */,
 				CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,8 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */,
+				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
+				CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
