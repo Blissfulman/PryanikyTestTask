@@ -33,7 +33,28 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        NetworkService().fetchViewData { result in
+            switch result {
+            case .success(let model):
+                print()
+                model.order.forEach { block in
+                    guard let blockData = model.blocks.first { $0.type == block }?.data else { return }
+
+                    switch blockData {
+                    case .text(data: let data):
+                        print(data.text!)
+                    case .picture(data: let data):
+                        print(data.text!, data.url!)
+                    case .selector(data: let data):
+                        print(data.selectedID!)
+                        print(data.variants!)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
     }
     
     // MARK: - Private methods

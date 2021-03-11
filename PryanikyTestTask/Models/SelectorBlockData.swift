@@ -8,7 +8,7 @@
 struct SelectorBlockData: Decodable {
     let selectedID: Int?
     let variants: [SelectorBlockDataVariant]?
-    
+
     private enum CodingKeys: String, CodingKey {
         case selectedID = "selectedId"
         case variants
