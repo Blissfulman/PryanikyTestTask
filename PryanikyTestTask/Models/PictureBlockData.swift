@@ -1,5 +1,5 @@
 //
-//  PictureBlock.swift
+//  PictureBlockData.swift
 //  PryanikyTestTask
 //
 //  Created by Evgeny Novgorodov on 11.03.2021.
