@@ -28,7 +28,8 @@ final class CellGenerator {
         case let .selector(selectedID, variants):
             guard let selectorCell = tableView.dequeueReusableCell(withIdentifier: SelectorCell.identifier,
                                                                    for: indexPath) as? SelectorCell else { break }
-            selectorCell.configure(selectedID: selectedID, variants: variants)
+            selectorCell.viewModel = SelectorCellViewModel(selectedID: selectedID, variants: variants)
+            selectorCell.configure()
             cell = selectorCell
         }
         
