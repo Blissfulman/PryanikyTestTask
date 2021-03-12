@@ -15,7 +15,9 @@ final class MainViewController: UIViewController {
     
     // MARK: - Properties
     
-    let viewModel: MainViewModelProtocol
+    var viewModel: MainViewModelProtocol
+    
+    private let сellGenerator = CellGenerator()
     
     // MARK: - Initializers
     
@@ -42,8 +44,9 @@ final class MainViewController: UIViewController {
     // MARK: - Private methods
     
     private func setupViewModelBindings() {
-        viewModel.dataModel.bind { [unowned self] dataModel in
-            self.tableView.reloadData()
+        viewModel.dataModelDidUpdate = { [weak self] in
+            self?.tableView.reloadData()
+            
         }
     }
 }
@@ -59,7 +62,7 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let blockData = viewModel.blockDataForRow(at: indexPath) else { return UITableViewCell() }
         
-        return CellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath, forTableView: tableView)
+        return сellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath, forTableView: tableView)
     }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectorCell: UITableViewCell {
+final class SelectorCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,4 +20,10 @@ class SelectorCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - Public methods
+    
+    func configure(selectedID: Int?, variants: [SelectorBlockDataVariant]) {
+        let variantText = variants.first(where: { $0.id == selectedID })?.text
+        textLabel?.text = "ID: \(selectedID!) " + variantText!
+    }
 }
