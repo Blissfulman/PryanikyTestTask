@@ -33,32 +33,19 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkService().fetchViewData { result in
-            switch result {
-            case .success(let model):
-                print()
-                model.order.forEach { blockType in
-                    guard let blockData = model.blocks.first(where: { $0.type == blockType })?.data else { return }
-
-                    switch blockData {
-                    case let .text(text):
-                        print(text!)
-                    case let .picture(text, url):
-                        print(text!, url!)
-                    case let .selector(selectedID, variants):
-                        print(selectedID!)
-                        variants.forEach {
-                            print($0.id!, $0.text!)
-                        }
-                    }
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        tableView.register(TextCell.nib(), forCellReuseIdentifier: TextCell.identifier)
+        tableView.register(PictureCell.nib(), forCellReuseIdentifier: PictureCell.identifier)
+        tableView.register(SelectorCell.nib(), forCellReuseIdentifier: SelectorCell.identifier)
+        setupViewModelBindings()
     }
     
     // MARK: - Private methods
+    
+    private func setupViewModelBindings() {
+        viewModel.dataModel.bind { [unowned self] dataModel in
+            self.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -66,15 +53,13 @@ final class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let blockData = viewModel.blockDataForRow(at: indexPath) else { return UITableViewCell() }
         
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "\(indexPath.row)"
-        
-        return cell
+        return CellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath, forTableView: tableView)
     }
 }
 
