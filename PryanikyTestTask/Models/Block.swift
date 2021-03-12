@@ -16,6 +16,8 @@ struct Block: Decodable {
         case data
     }
     
+    // MARK: - Initializers
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let blockType = try values.decode(BlockType.self, forKey: .type)

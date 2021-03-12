@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class PictureCell: UITableViewCell {
     
@@ -17,9 +18,8 @@ final class PictureCell: UITableViewCell {
     // MARK: - Public methods
     
     func configure(text: String?, url: URL?) {
-        if let url = url, let imageData = try? Data(contentsOf: url) {
-            pictureImageView.image = UIImage(data: imageData)
-        }
+        pictureImageView.kf.indicatorType = .activity
+        pictureImageView.kf.setImage(with: url)
         titleLabel.text = text
     }
 }
