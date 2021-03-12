@@ -5,7 +5,7 @@
 //  Created by Evgeny Novgorodov on 11.03.2021.
 //
 
-import Foundation
+import Alamofire
 
 protocol NetworkServiceProtocol {
     func fetchViewData(completion: @escaping (Result<DataModel, Error>) -> Void)
@@ -13,14 +13,16 @@ protocol NetworkServiceProtocol {
     
 final class NetworkService: NetworkServiceProtocol {
     
-    private let requestService = RequestService()
-    private let dataTaskService = DataTaskService()
+    private let url = "https://pryaniky.com/static/json/sample.json"
     
     func fetchViewData(completion: @escaping (Result<DataModel, Error>) -> Void) {
-        guard let url = URL(string: "https://pryaniky.com/static/json/sample.json") else { return }
-        
-        let request = requestService.request(url: url)
-        
-        dataTaskService.dataTask(request: request, completion: completion)
+        AF.request(url).responseDecodable(of: DataModel.self) { response in
+            switch response.result {
+            case .success(let dataModel):
+                completion(.success(dataModel))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

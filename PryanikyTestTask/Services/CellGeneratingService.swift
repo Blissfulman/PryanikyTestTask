@@ -1,5 +1,5 @@
 //
-//  CellGenerator.swift
+//  CellGeneratingService.swift
 //  PryanikyTestTask
 //
 //  Created by Evgeny Novgorodov on 12.03.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CellGenerator {
+final class CellGeneratingService {
     
     func getCellAtBlockData(_ blockData: BlockData,
                             withIndexPath indexPath: IndexPath,

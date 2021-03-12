@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,6 @@
 		CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */; };
 		CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAD25FA444600274A95 /* DataModel.swift */; };
 		CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDB625FA52D100274A95 /* NetworkService.swift */; };
-		CE20DDBB25FA536500274A95 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDBA25FA536500274A95 /* RequestService.swift */; };
-		CE20DDBE25FA53E900274A95 /* DataTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDBD25FA53E900274A95 /* DataTaskService.swift */; };
 		CE20DDC325FAA50E00274A95 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDC225FAA50E00274A95 /* Block.swift */; };
 		CE20DDD125FB3B0A00274A95 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDCF25FB3B0A00274A95 /* TextCell.swift */; };
 		CE20DDD225FB3B0A00274A95 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DDD025FB3B0A00274A95 /* TextCell.xib */; };
@@ -29,7 +27,7 @@
 		CE20DDDE25FB3B7300274A95 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDDC25FB3B7300274A95 /* SelectorCell.swift */; };
 		CE20DDDF25FB3B7300274A95 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DDDD25FB3B7300274A95 /* SelectorCell.xib */; };
 		CE20DDEB25FB464F00274A95 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */; };
-		CE20DDEE25FB4B2300274A95 /* CellGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDED25FB4B2300274A95 /* CellGenerator.swift */; };
+		CE20DDEE25FB4B2300274A95 /* CellGeneratingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */; };
 		CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */; };
 		CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */; };
 		CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */; };
@@ -54,8 +52,6 @@
 		CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorBlockDataVariant.swift; sourceTree = "<group>"; };
 		CE20DDAD25FA444600274A95 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CE20DDB625FA52D100274A95 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		CE20DDBA25FA536500274A95 /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
-		CE20DDBD25FA53E900274A95 /* DataTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskService.swift; sourceTree = "<group>"; };
 		CE20DDC225FAA50E00274A95 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		CE20DDCF25FB3B0A00274A95 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		CE20DDD025FB3B0A00274A95 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
@@ -64,7 +60,7 @@
 		CE20DDDC25FB3B7300274A95 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
 		CE20DDDD25FB3B7300274A95 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
 		CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
-		CE20DDED25FB4B2300274A95 /* CellGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGenerator.swift; sourceTree = "<group>"; };
+		CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGeneratingService.swift; sourceTree = "<group>"; };
 		CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
 		CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 				6A56AE73E788A7641457062C /* Pods-PryanikyTestTask.debug.xcconfig */,
 				743139B7BFDE292C445B5C09 /* Pods-PryanikyTestTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -187,10 +182,8 @@
 		CE20DDB525FA52BA00274A95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE20DDBA25FA536500274A95 /* RequestService.swift */,
-				CE20DDBD25FA53E900274A95 /* DataTaskService.swift */,
 				CE20DDB625FA52D100274A95 /* NetworkService.swift */,
-				CE20DDED25FB4B2300274A95 /* CellGenerator.swift */,
+				CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,13 +348,11 @@
 				CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */,
 				CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */,
 				CE20DDC325FAA50E00274A95 /* Block.swift in Sources */,
-				CE20DDEE25FB4B2300274A95 /* CellGenerator.swift in Sources */,
-				CE20DDBB25FA536500274A95 /* RequestService.swift in Sources */,
+				CE20DDEE25FB4B2300274A95 /* CellGeneratingService.swift in Sources */,
 				CE20DDEB25FB464F00274A95 /* UITableViewCell+Extension.swift in Sources */,
 				CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */,
 				CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */,
 				CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */,
-				CE20DDBE25FA53E900274A95 /* DataTaskService.swift in Sources */,
 				CE20DDDE25FB3B7300274A95 /* SelectorCell.swift in Sources */,
 				CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */,
 				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,

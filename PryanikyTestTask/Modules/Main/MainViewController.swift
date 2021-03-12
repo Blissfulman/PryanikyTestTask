@@ -17,7 +17,7 @@ final class MainViewController: UIViewController {
     
     var viewModel: MainViewModelProtocol
     
-    private let сellGenerator = CellGenerator()
+    private let сellGeneratorService = CellGeneratingService()
     
     // MARK: - Initializers
     
@@ -61,7 +61,7 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let blockData = viewModel.getBlockDataForRow(at: indexPath) else { return UITableViewCell() }
         
-        return сellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath,
+        return сellGeneratorService.getCellAtBlockData(blockData, withIndexPath: indexPath,
                                                  forTableView: tableView, delegate: self)
     }
 }
