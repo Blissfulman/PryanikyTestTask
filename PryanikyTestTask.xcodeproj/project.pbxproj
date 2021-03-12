@@ -3,23 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FEC8AA2BB20192101A68C34 /* Pods_PryanikyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A153A6A09DF8A9019FFCD3C1 /* Pods_PryanikyTestTask.framework */; };
 		CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD7C25FA25A800274A95 /* AppDelegate.swift */; };
-		CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD8025FA25A800274A95 /* ViewController.swift */; };
+		CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD8025FA25A800274A95 /* MainViewController.swift */; };
 		CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8525FA25A900274A95 /* Assets.xcassets */; };
 		CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD8725FA25A900274A95 /* LaunchScreen.storyboard */; };
+		CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DD9925FA3EDD00274A95 /* MainViewController.xib */; };
+		CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */; };
+		CE20DDA425FA422800274A95 /* BlockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA325FA422800274A95 /* BlockType.swift */; };
+		CE20DDA825FA423400274A95 /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDA725FA423400274A95 /* BlockData.swift */; };
+		CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */; };
+		CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDAD25FA444600274A95 /* DataModel.swift */; };
+		CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDB625FA52D100274A95 /* NetworkService.swift */; };
+		CE20DDC325FAA50E00274A95 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDC225FAA50E00274A95 /* Block.swift */; };
+		CE20DDD125FB3B0A00274A95 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDCF25FB3B0A00274A95 /* TextCell.swift */; };
+		CE20DDD225FB3B0A00274A95 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DDD025FB3B0A00274A95 /* TextCell.xib */; };
+		CE20DDD825FB3B4D00274A95 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDD625FB3B4D00274A95 /* PictureCell.swift */; };
+		CE20DDD925FB3B4D00274A95 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DDD725FB3B4D00274A95 /* PictureCell.xib */; };
+		CE20DDDE25FB3B7300274A95 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDDC25FB3B7300274A95 /* SelectorCell.swift */; };
+		CE20DDDF25FB3B7300274A95 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE20DDDD25FB3B7300274A95 /* SelectorCell.xib */; };
+		CE20DDEB25FB464F00274A95 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */; };
+		CE20DDEE25FB4B2300274A95 /* CellGeneratingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */; };
+		CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */; };
+		CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */; };
+		CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */; };
+		CE20DE0125FBE96B00274A95 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */; };
+		CE20DE0425FBEACF00274A95 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DE0325FBEACF00274A95 /* UIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A56AE73E788A7641457062C /* Pods-PryanikyTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PryanikyTestTask.debug.xcconfig"; path = "Target Support Files/Pods-PryanikyTestTask/Pods-PryanikyTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		743139B7BFDE292C445B5C09 /* Pods-PryanikyTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PryanikyTestTask.release.xcconfig"; path = "Target Support Files/Pods-PryanikyTestTask/Pods-PryanikyTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		A153A6A09DF8A9019FFCD3C1 /* Pods_PryanikyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PryanikyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20DD7925FA25A800274A95 /* PryanikyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PryanikyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20DD7C25FA25A800274A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE20DD8025FA25A800274A95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE20DD8025FA25A800274A95 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE20DD8525FA25A900274A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE20DD8825FA25A900274A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE20DD8A25FA25A900274A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE20DD9925FA3EDD00274A95 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE20DDA325FA422800274A95 /* BlockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockType.swift; sourceTree = "<group>"; };
+		CE20DDA725FA423400274A95 /* BlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockData.swift; sourceTree = "<group>"; };
+		CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorBlockDataVariant.swift; sourceTree = "<group>"; };
+		CE20DDAD25FA444600274A95 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		CE20DDB625FA52D100274A95 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CE20DDC225FAA50E00274A95 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		CE20DDCF25FB3B0A00274A95 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		CE20DDD025FB3B0A00274A95 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		CE20DDD625FB3B4D00274A95 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
+		CE20DDD725FB3B4D00274A95 /* PictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
+		CE20DDDC25FB3B7300274A95 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
+		CE20DDDD25FB3B7300274A95 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
+		CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGeneratingService.swift; sourceTree = "<group>"; };
+		CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
+		CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CE20DE0325FBEACF00274A95 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEC8AA2BB20192101A68C34 /* Pods_PryanikyTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3232B39763F8520CAE20FC5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A56AE73E788A7641457062C /* Pods-PryanikyTestTask.debug.xcconfig */,
+				743139B7BFDE292C445B5C09 /* Pods-PryanikyTestTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		95A5047EFC088A2BF5077C46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A153A6A09DF8A9019FFCD3C1 /* Pods_PryanikyTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE20DD7025FA25A800274A95 = {
 			isa = PBXGroup;
 			children = (
 				CE20DD7B25FA25A800274A95 /* PryanikyTestTask */,
 				CE20DD7A25FA25A800274A95 /* Products */,
+				3232B39763F8520CAE20FC5D /* Pods */,
+				95A5047EFC088A2BF5077C46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +120,9 @@
 			children = (
 				CE20DD7C25FA25A800274A95 /* AppDelegate.swift */,
 				CE20DD9525FA291500274A95 /* Modules */,
+				CE20DDA225FA41F100274A95 /* Models */,
+				CE20DDB525FA52BA00274A95 /* Services */,
+				CE20DDCA25FAB1A800274A95 /* Additional Files */,
 				CE20DD9725FA292100274A95 /* Supporting Files */,
 				CE20DD9425FA28FA00274A95 /* Resources */,
 			);
@@ -71,7 +140,7 @@
 		CE20DD9525FA291500274A95 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				CE20DD8025FA25A800274A95 /* ViewController.swift */,
+				CE20DDA025FA3FA600274A95 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -85,6 +154,80 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE20DDA025FA3FA600274A95 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DD8025FA25A800274A95 /* MainViewController.swift */,
+				CE20DD9D25FA3FA000274A95 /* MainViewModel.swift */,
+				CE20DD9925FA3EDD00274A95 /* MainViewController.xib */,
+				CE20DDD525FB3B1900274A95 /* TextCell */,
+				CE20DDCE25FB3AB100274A95 /* PictureCell */,
+				CE20DDDB25FB3B5600274A95 /* SelectorCell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE20DDA225FA41F100274A95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDAD25FA444600274A95 /* DataModel.swift */,
+				CE20DDC225FAA50E00274A95 /* Block.swift */,
+				CE20DDA325FA422800274A95 /* BlockType.swift */,
+				CE20DDA725FA423400274A95 /* BlockData.swift */,
+				CE20DDAA25FA424400274A95 /* SelectorBlockDataVariant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE20DDB525FA52BA00274A95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDB625FA52D100274A95 /* NetworkService.swift */,
+				CE20DDED25FB4B2300274A95 /* CellGeneratingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE20DDCA25FAB1A800274A95 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DE0325FBEACF00274A95 /* UIConstants.swift */,
+				CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */,
+				CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */,
+				CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */,
+				CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */,
+			);
+			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		CE20DDCE25FB3AB100274A95 /* PictureCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDD625FB3B4D00274A95 /* PictureCell.swift */,
+				CE20DDD725FB3B4D00274A95 /* PictureCell.xib */,
+			);
+			path = PictureCell;
+			sourceTree = "<group>";
+		};
+		CE20DDD525FB3B1900274A95 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDCF25FB3B0A00274A95 /* TextCell.swift */,
+				CE20DDD025FB3B0A00274A95 /* TextCell.xib */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		CE20DDDB25FB3B5600274A95 /* SelectorCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE20DDDC25FB3B7300274A95 /* SelectorCell.swift */,
+				CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */,
+				CE20DDDD25FB3B7300274A95 /* SelectorCell.xib */,
+			);
+			path = SelectorCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE20DD8D25FA25A900274A95 /* Build configuration list for PBXNativeTarget "PryanikyTestTask" */;
 			buildPhases = (
+				FFF988846145B6E2EB8B9D84 /* [CP] Check Pods Manifest.lock */,
 				CE20DD7525FA25A800274A95 /* Sources */,
 				CE20DD7625FA25A800274A95 /* Frameworks */,
 				CE20DD7725FA25A800274A95 /* Resources */,
+				3A35B644BFA6111E11F449C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,20 +287,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE20DDDF25FB3B7300274A95 /* SelectorCell.xib in Resources */,
 				CE20DD8925FA25A900274A95 /* LaunchScreen.storyboard in Resources */,
+				CE20DD9A25FA3EDD00274A95 /* MainViewController.xib in Resources */,
+				CE20DDD225FB3B0A00274A95 /* TextCell.xib in Resources */,
 				CE20DD8625FA25A900274A95 /* Assets.xcassets in Resources */,
+				CE20DDD925FB3B4D00274A95 /* PictureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A35B644BFA6111E11F449C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PryanikyTestTask/Pods-PryanikyTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PryanikyTestTask/Pods-PryanikyTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PryanikyTestTask/Pods-PryanikyTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFF988846145B6E2EB8B9D84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PryanikyTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE20DD7525FA25A800274A95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE20DD8125FA25A800274A95 /* ViewController.swift in Sources */,
+				CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */,
+				CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */,
+				CE20DDC325FAA50E00274A95 /* Block.swift in Sources */,
+				CE20DDEE25FB4B2300274A95 /* CellGeneratingService.swift in Sources */,
+				CE20DDEB25FB464F00274A95 /* UITableViewCell+Extension.swift in Sources */,
+				CE20DDAE25FA444600274A95 /* DataModel.swift in Sources */,
+				CE20DDB725FA52D100274A95 /* NetworkService.swift in Sources */,
+				CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */,
+				CE20DDDE25FB3B7300274A95 /* SelectorCell.swift in Sources */,
+				CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */,
+				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,
+				CE20DE0125FBE96B00274A95 /* UIButton+Extension.swift in Sources */,
+				CE20DDD125FB3B0A00274A95 /* TextCell.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
+				CE20DDA425FA422800274A95 /* BlockType.swift in Sources */,
+				CE20DE0425FBEACF00274A95 /* UIConstants.swift in Sources */,
+				CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */,
+				CE20DDD825FB3B4D00274A95 /* PictureCell.swift in Sources */,
+				CE20DDA825FA423400274A95 /* BlockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +499,7 @@
 		};
 		CE20DD8E25FA25A900274A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A56AE73E788A7641457062C /* Pods-PryanikyTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +519,7 @@
 		};
 		CE20DD8F25FA25A900274A95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743139B7BFDE292C445B5C09 /* Pods-PryanikyTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
