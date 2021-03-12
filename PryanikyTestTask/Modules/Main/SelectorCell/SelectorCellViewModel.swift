@@ -9,11 +9,18 @@ import Foundation
 
 // MARK: - Protocols
 
+protocol SelectorCellViewModelDelegate: AnyObject {
+    func showDescriprion(type: BlockType, message: String)
+}
+
 protocol SelectorCellViewModelProtocol {
-    var needSetupVariants: (([String], Int) -> Void)? { get set }
+    var needSetupVariants: (([String]) -> Void)? { get set }
     var needSetupSelection: ((Int) -> Void)? { get set }
+    var delegate: SelectorCellViewModelDelegate! { get set }
     
-    func initialSetupVariants()
+    init(selectedID: Int?, variants: [SelectorBlockDataVariant])
+    
+    func initialSetupOfVariants()
     func variantDidSelect(atIndex index: Int)
 }
 
@@ -21,11 +28,12 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     
     // MARK: - Properties
     
-    var needSetupVariants: (([String], Int) -> Void)?
-    
+    weak var delegate: SelectorCellViewModelDelegate!
+    var needSetupVariants: (([String]) -> Void)?
     var needSetupSelection: ((Int) -> Void)?
         
     private var selectedID: Int
+    private let variants: [SelectorBlockDataVariant]
     
     private var selectedVariant: Int {
         get {
@@ -34,8 +42,6 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
             selectedID = newValue + 1
         }
     }
-    
-    private let variants: [SelectorBlockDataVariant]
     
     // MARK: - Initializers
     
@@ -46,13 +52,15 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     
     // MARK: - Public methods
     
-    func initialSetupVariants() {
-        needSetupVariants?(variants.compactMap { $0.text }, selectedID)
+    func initialSetupOfVariants() {
+        needSetupVariants?(variants.compactMap { $0.text })
         needSetupSelection?(selectedVariant)
     }
     
     func variantDidSelect(atIndex index: Int) {
         selectedVariant = index
         needSetupSelection?(selectedVariant)
+        let text = variants[safeIndex: selectedVariant]?.text ?? ""
+        delegate?.showDescriprion(type: .selector, message: "Выбран вариант \"\(text)\"")
     }
 }

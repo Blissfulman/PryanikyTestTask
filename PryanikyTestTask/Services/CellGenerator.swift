@@ -11,7 +11,8 @@ final class CellGenerator {
     
     func getCellAtBlockData(_ blockData: BlockData,
                             withIndexPath indexPath: IndexPath,
-                            forTableView tableView: UITableView) -> UITableViewCell {
+                            forTableView tableView: UITableView,
+                            delegate: UIViewController) -> UITableViewCell {
         var cell = UITableViewCell()
         
         switch blockData {
@@ -29,11 +30,12 @@ final class CellGenerator {
             guard let selectorCell = tableView.dequeueReusableCell(withIdentifier: SelectorCell.identifier,
                                                                    for: indexPath) as? SelectorCell else { break }
             selectorCell.viewModel = SelectorCellViewModel(selectedID: selectedID, variants: variants)
+            guard let delegate = delegate as? SelectorCellViewModelDelegate else { break }
+            selectorCell.viewModel.delegate = delegate
             selectorCell.configure()
             cell = selectorCell
         }
         
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }

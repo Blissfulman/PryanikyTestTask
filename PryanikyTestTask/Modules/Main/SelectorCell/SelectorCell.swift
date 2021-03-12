@@ -29,8 +29,9 @@ final class SelectorCell: UITableViewCell {
     // MARK: - Public methods
     
     func configure() {
+        selectionStyle = .none
         setupViewModelBindings()
-        viewModel.initialSetupVariants()
+        viewModel.initialSetupOfVariants()
     }
     
     // MARK: - Private methods
@@ -38,14 +39,10 @@ final class SelectorCell: UITableViewCell {
     private func setupViewModelBindings() {
         guard viewModel != nil else { return }
         
-        viewModel.needSetupVariants = { [weak self] titles, selectedID in
-            self?.buttons = titles.enumerated().map {
-                let button = UIButton()
-                button.setTitle($0.element, for: .normal)
-                button.isUserInteractionEnabled = true
-                button.translatesAutoresizingMaskIntoConstraints = false
-                
+        viewModel.needSetupVariants = { [weak self] titles in
+            self?.buttons = titles.map {
                 let buttonTapGR = UITapGestureRecognizer(target: self, action: #selector(self?.buttonDidTap))
+                let button = UIButton.buttonOfVariant(withTitle: $0)
                 button.addGestureRecognizer(buttonTapGR)
                 return button
             }
@@ -53,15 +50,19 @@ final class SelectorCell: UITableViewCell {
         }
         
         viewModel.needSetupSelection = { [weak self] id in
-            self?.buttons.forEach { $0.backgroundColor = .systemGray }
-            self?.buttons[id].backgroundColor = .systemBlue
+            guard let self = self else { return }
+            
+            self.buttons.forEach { $0.backgroundColor = UIConstants.buttonDeselectedColor }
+            if let button = self.buttons[safeIndex: id] {
+                button.backgroundColor = UIConstants.buttonSelectedColor
+            }
         }
     }
     
     @objc private func buttonDidTap(sender: UITapGestureRecognizer) {
         if let button = sender.view as? UIButton {
-            if let buttonID = buttons.firstIndex(where: { $0 == button }) {
-                viewModel.variantDidSelect(atIndex: buttonID)
+            if let index = buttons.firstIndex(where: { $0 == button }) {
+                viewModel.variantDidSelect(atIndex: index)
             }
         }
     }

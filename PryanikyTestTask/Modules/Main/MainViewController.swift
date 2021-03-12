@@ -46,7 +46,6 @@ final class MainViewController: UIViewController {
     private func setupViewModelBindings() {
         viewModel.dataModelDidUpdate = { [weak self] in
             self?.tableView.reloadData()
-            
         }
     }
 }
@@ -60,9 +59,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let blockData = viewModel.blockDataForRow(at: indexPath) else { return UITableViewCell() }
+        guard let blockData = viewModel.getBlockDataForRow(at: indexPath) else { return UITableViewCell() }
         
-        return сellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath, forTableView: tableView)
+        return сellGenerator.getCellAtBlockData(blockData, withIndexPath: indexPath,
+                                                 forTableView: tableView, delegate: self)
     }
 }
 
@@ -70,4 +70,20 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedCell = tableView.cellForRow(at: indexPath),
+              let blockDescriprion = viewModel.getBlockDescription(at: indexPath) else { return }
+        
+        selectedCell.setSelected(false, animated: true)
+        showActionDescription(type: blockDescriprion.type, message: blockDescriprion.message)
+    }
+}
+
+// MARK: - SelectorCellViewModelDelegate
+
+extension MainViewController: SelectorCellViewModelDelegate {
+    
+    func showDescriprion(type: BlockType, message: String) {
+        showActionDescription(type: type, message: message)
+    }
 }

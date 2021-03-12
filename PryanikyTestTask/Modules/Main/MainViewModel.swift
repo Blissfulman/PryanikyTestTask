@@ -13,7 +13,8 @@ protocol MainViewModelProtocol {
     var dataModelDidUpdate: (() -> Void)? { get set }
     var numberOfRows: Int { get }
     
-    func blockDataForRow(at indexPath: IndexPath) -> BlockData?
+    func getBlockDataForRow(at indexPath: IndexPath) -> BlockData?
+    func getBlockDescription(at indexPath: IndexPath) -> (type: BlockType, message: String)?
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -42,10 +43,23 @@ final class MainViewModel: MainViewModelProtocol {
     
     // MARK: - Public methods
     
-    func blockDataForRow(at indexPath: IndexPath) -> BlockData? {
+    func getBlockDataForRow(at indexPath: IndexPath) -> BlockData? {
         guard let blockType = dataModel?.order[indexPath.row] else { return nil }
 
         return dataModel?.blocks.first(where: { $0.type == blockType })?.data
+    }
+    
+    func getBlockDescription(at indexPath: IndexPath) -> (type: BlockType, message: String)? {
+        guard let blockData = getBlockDataForRow(at: indexPath) else { return nil }
+        
+        switch blockData {
+        case let .text(text):
+            return (type: .text, message: "Текст: \"\(text ?? "")\"")
+        case let .picture(text, _):
+            return (type: .picture, message: "Картинка с подписью \"\(text ?? "")\"")
+        case .selector:
+            return nil
+        }
     }
     
     // MARK: - Private methods

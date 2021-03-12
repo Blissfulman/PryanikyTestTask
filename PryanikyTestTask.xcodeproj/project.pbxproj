@@ -30,6 +30,10 @@
 		CE20DDEB25FB464F00274A95 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */; };
 		CE20DDEE25FB4B2300274A95 /* CellGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDED25FB4B2300274A95 /* CellGenerator.swift */; };
 		CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */; };
+		CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */; };
+		CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */; };
+		CE20DE0125FBE96B00274A95 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */; };
+		CE20DE0425FBEACF00274A95 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20DE0325FBEACF00274A95 /* UIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		CE20DDED25FB4B2300274A95 /* CellGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGenerator.swift; sourceTree = "<group>"; };
 		CE20DDF225FB8AD100274A95 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
+		CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CE20DE0325FBEACF00274A95 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +173,11 @@
 		CE20DDCA25FAB1A800274A95 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE20DE0325FBEACF00274A95 /* UIConstants.swift */,
 				CE20DDEA25FB464F00274A95 /* UITableViewCell+Extension.swift */,
+				CE20DDF625FBD97E00274A95 /* UIViewController+Extension.swift */,
+				CE20DDFD25FBDD6200274A95 /* Collection+Extension.swift */,
+				CE20DE0025FBE96B00274A95 /* UIButton+Extension.swift */,
 			);
 			path = "Additional Files";
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE20DDF725FBD97E00274A95 /* UIViewController+Extension.swift in Sources */,
 				CE20DDAB25FA424400274A95 /* SelectorBlockDataVariant.swift in Sources */,
 				CE20DDC325FAA50E00274A95 /* Block.swift in Sources */,
 				CE20DDEE25FB4B2300274A95 /* CellGenerator.swift in Sources */,
@@ -281,10 +294,13 @@
 				CE20DDF325FB8AD100274A95 /* SelectorCellViewModel.swift in Sources */,
 				CE20DDBE25FA53E900274A95 /* DataTaskService.swift in Sources */,
 				CE20DDDE25FB3B7300274A95 /* SelectorCell.swift in Sources */,
+				CE20DDFE25FBDD6200274A95 /* Collection+Extension.swift in Sources */,
 				CE20DD8125FA25A800274A95 /* MainViewController.swift in Sources */,
+				CE20DE0125FBE96B00274A95 /* UIButton+Extension.swift in Sources */,
 				CE20DDD125FB3B0A00274A95 /* TextCell.swift in Sources */,
 				CE20DD7D25FA25A800274A95 /* AppDelegate.swift in Sources */,
 				CE20DDA425FA422800274A95 /* BlockType.swift in Sources */,
+				CE20DE0425FBEACF00274A95 /* UIConstants.swift in Sources */,
 				CE20DD9E25FA3FA000274A95 /* MainViewModel.swift in Sources */,
 				CE20DDD825FB3B4D00274A95 /* PictureCell.swift in Sources */,
 				CE20DDA825FA423400274A95 /* BlockData.swift in Sources */,

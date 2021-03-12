@@ -14,18 +14,6 @@ final class PictureCell: UITableViewCell {
     @IBOutlet private weak var pictureImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-//        backgroundColor = .yellow
-        // Configure the view for the selected state
-    }
-    
     // MARK: - Public methods
     
     func configure(text: String?, url: URL?) {
