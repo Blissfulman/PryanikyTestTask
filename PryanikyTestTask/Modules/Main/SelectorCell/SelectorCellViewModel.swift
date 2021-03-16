@@ -32,22 +32,15 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     var needSetupVariants: (([String]) -> Void)?
     var needSetupSelection: ((Int) -> Void)?
         
-    private var selectedID: Int?
+    private var selectedID = 0
     private let variants: [SelectorBlockDataVariant]
-    
-    private var selectedVariant: Int {
-        get {
-            guard let selectedID = selectedID else { return 1 }
-            return selectedID - 1
-        } set {
-            selectedID = newValue + 1
-        }
-    }
     
     // MARK: - Initializers
     
     init(selectedID: Int?, variants: [SelectorBlockDataVariant]) {
-        self.selectedID = selectedID
+        if let selectedID = selectedID {
+            self.selectedID = selectedID - 1
+        }
         self.variants = variants
     }
     
@@ -55,13 +48,13 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     
     func initialSetupOfVariants() {
         needSetupVariants?(variants.compactMap { $0.text })
-        needSetupSelection?(selectedVariant)
+        needSetupSelection?(selectedID)
     }
     
     func variantDidSelect(atIndex index: Int) {
-        selectedVariant = index
-        needSetupSelection?(selectedVariant)
-        let text = variants[safeIndex: selectedVariant]?.text ?? ""
+        selectedID = index
+        needSetupSelection?(selectedID)
+        let text = variants[safeIndex: selectedID]?.text ?? ""
         delegate?.showDescriprion(type: .selector, message: "Выбран вариант \"\(text)\"")
     }
 }
