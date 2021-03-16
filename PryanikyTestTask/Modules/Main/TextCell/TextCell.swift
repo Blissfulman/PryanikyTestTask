@@ -8,5 +8,10 @@
 import UIKit
 
 final class TextCell: UITableViewCell {
-    // При необходимости можно как-то кастомизировать ячейку
+    
+    // MARK: - Lifecycle methods
+    
+    override func prepareForReuse() {
+        textLabel?.text = nil
+    }
 }

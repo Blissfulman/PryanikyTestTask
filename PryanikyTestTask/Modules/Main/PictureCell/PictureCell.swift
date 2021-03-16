@@ -15,6 +15,13 @@ final class PictureCell: UITableViewCell {
     @IBOutlet private weak var pictureImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
+    // MARK: - Lifecycle methods
+    
+    override func prepareForReuse() {
+        pictureImageView.image = nil
+        titleLabel.text = nil
+    }
+    
     // MARK: - Public methods
     
     func configure(text: String?, url: URL?) {

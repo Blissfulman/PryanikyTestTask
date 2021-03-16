@@ -22,8 +22,7 @@ final class SelectorCell: UITableViewCell {
     // MARK: - Lifecycle methods
     
     override func prepareForReuse() {
-        buttons.forEach { stackView.removeArrangedSubview($0) }
-        buttons = []
+        buttons.forEach { $0.removeFromSuperview() }
     }
     
     // MARK: - Public methods

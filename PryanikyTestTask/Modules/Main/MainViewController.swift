@@ -62,7 +62,7 @@ extension MainViewController: UITableViewDataSource {
         guard let blockData = viewModel.getBlockDataForRow(at: indexPath) else { return UITableViewCell() }
         
         return сellGeneratorService.getCellAtBlockData(blockData, withIndexPath: indexPath,
-                                                 forTableView: tableView, delegate: self)
+                                                        forTableView: tableView, delegate: self)
     }
 }
 
