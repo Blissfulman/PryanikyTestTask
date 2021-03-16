@@ -32,12 +32,13 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     var needSetupVariants: (([String]) -> Void)?
     var needSetupSelection: ((Int) -> Void)?
         
-    private var selectedID: Int
+    private var selectedID: Int?
     private let variants: [SelectorBlockDataVariant]
     
     private var selectedVariant: Int {
         get {
-            selectedID - 1
+            guard let selectedID = selectedID else { return 1 }
+            return selectedID - 1
         } set {
             selectedID = newValue + 1
         }
@@ -46,7 +47,7 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     // MARK: - Initializers
     
     init(selectedID: Int?, variants: [SelectorBlockDataVariant]) {
-        self.selectedID = selectedID ?? 0
+        self.selectedID = selectedID
         self.variants = variants
     }
     

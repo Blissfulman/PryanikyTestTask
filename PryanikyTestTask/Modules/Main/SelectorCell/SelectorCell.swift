@@ -48,11 +48,11 @@ final class SelectorCell: UITableViewCell {
             self?.addButtonsToStackView()
         }
         
-        viewModel.needSetupSelection = { [weak self] id in
+        viewModel.needSetupSelection = { [weak self] index in
             guard let self = self else { return }
             
             self.buttons.forEach { $0.backgroundColor = UIConstants.buttonDeselectedColor }
-            if let button = self.buttons[safeIndex: id] {
+            if let button = self.buttons[safeIndex: index] {
                 button.backgroundColor = UIConstants.buttonSelectedColor
             }
         }
