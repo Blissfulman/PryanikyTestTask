@@ -49,8 +49,7 @@ final class SelectorCell: UITableViewCell {
         }
         
         viewModel.needSetupSelection = { [weak self] index in
-            guard let index = index,
-                  let self = self else { return }
+            guard let self = self else { return }
             
             self.buttons.forEach { $0.backgroundColor = UIConstants.buttonDeselectedColor }
             if let button = self.buttons[safeIndex: index] {

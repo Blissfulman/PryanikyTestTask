@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Protocols
 
 protocol MainViewModelProtocol {
-    var dataModelDidUpdate: (() -> Void)? { get set }
+    var dataDidUpdate: (() -> Void)? { get set }
     var numberOfRows: Int { get }
     
     func getBlockDataForRow(at indexPath: IndexPath) -> BlockData?
@@ -21,32 +21,29 @@ final class MainViewModel: MainViewModelProtocol {
     
     // MARK: - Properties
     
-    var dataModelDidUpdate: (() -> Void)?
+    var dataDidUpdate: (() -> Void)?
     
     var numberOfRows: Int {
-        dataModel?.order.count ?? 0
+        blocks.count
     }
     
-    private var dataModel: DataModel? {
+    private var blocks = [Block]() {
         didSet {
-            dataModelDidUpdate?()
+            dataDidUpdate?()
         }
     }
-    
     private let networkService: NetworkServiceProtocol = NetworkService()
     
     // MARK: - Initializers
     
     init() {
-        getDataModel()
+        getData()
     }
     
     // MARK: - Public methods
     
     func getBlockDataForRow(at indexPath: IndexPath) -> BlockData? {
-        guard let blockType = dataModel?.order[indexPath.row] else { return nil }
-
-        return dataModel?.blocks.first(where: { $0.type == blockType })?.data
+        blocks[safeIndex: indexPath.row]?.data
     }
     
     func getBlockDescription(at indexPath: IndexPath) -> (type: BlockType, message: String)? {
@@ -64,11 +61,11 @@ final class MainViewModel: MainViewModelProtocol {
     
     // MARK: - Private methods
     
-    private func getDataModel() {
+    private func getData() {
         networkService.fetchViewData { [weak self] result in
             switch result {
             case .success(let dataModel):
-                self?.dataModel = dataModel
+                self?.blocks = dataModel.allBlocks
             case .failure(let error):
                 print(error.localizedDescription)
             }

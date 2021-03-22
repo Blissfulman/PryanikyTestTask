@@ -14,7 +14,8 @@ protocol NetworkServiceProtocol {
 final class NetworkService: NetworkServiceProtocol {
     
 //    private let url = "https://pryaniky.com/static/json/sample.json"
-    private let url = "https://chat.pryaniky.com/json/data-custom-selected-id.json"
+//    private let url = "https://chat.pryaniky.com/json/data-custom-selected-id.json"
+    private let url = "https://chat.pryaniky.com/json/data-custom-order-much-more-items-in-data.json"
     
     func fetchViewData(completion: @escaping (Result<DataModel, Error>) -> Void) {
         AF.request(url).responseDecodable(of: DataModel.self) { response in

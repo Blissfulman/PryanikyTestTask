@@ -44,7 +44,7 @@ final class MainViewController: UIViewController {
     // MARK: - Private methods
     
     private func setupViewModelBindings() {
-        viewModel.dataModelDidUpdate = { [weak self] in
+        viewModel.dataDidUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
     }

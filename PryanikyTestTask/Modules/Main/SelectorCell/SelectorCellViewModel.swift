@@ -17,7 +17,7 @@ protocol SelectorCellViewModelProtocol {
     /// Замыкание, в которое передаётся массив заголовков вариантов.
     var needSetupVariants: ((_ titles: [String]) -> Void)? { get set }
     /// Замыкание, в которое передаётся индекс выбранного варианта.
-    var needSetupSelection: ((_ selectedIndex: Int?) -> Void)? { get set }
+    var needSetupSelection: ((_ selectedIndex: Int) -> Void)? { get set }
     var delegate: SelectorCellViewModelDelegate! { get set }
     
     init(selectedID: Int?, variants: [SelectorBlockDataVariant])
@@ -32,14 +32,13 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     
     weak var delegate: SelectorCellViewModelDelegate!
     var needSetupVariants: ((_ titles: [String]) -> Void)?
-    var needSetupSelection: ((_ selectedIndex: Int?) -> Void)?
+    var needSetupSelection: ((_ selectedIndex: Int) -> Void)?
         
     private var selectedID: Int?
     private let variants: [SelectorBlockDataVariant]
-//    private var selectedVariant: Int? {
-//        guard let selectedIndex = selectedIndex else { return nil }
-//        return
-//    }
+    private var selectedIndex: Int? {
+        variants.firstIndex { $0.id == selectedID }
+    }
     
     // MARK: - Initializers
     
@@ -52,23 +51,20 @@ final class SelectorCellViewModel: SelectorCellViewModelProtocol {
     
     func initialSetupOfVariants() {
         needSetupVariants?(variants.compactMap { $0.text })
-        if let selectedID = selectedID {
-            needSetupSelection?(getSelectedIndex(byID: selectedID))
+        if let selectedIndex = selectedIndex {
+            needSetupSelection?(selectedIndex)
         }
     }
     
     func variantDidSelect(atIndex index: Int) {
-        guard let selectedVariantID = variants[safeIndex: index]?.id,
-              let selectedIndex = getSelectedIndex(byID: selectedVariantID) else { return }
+        guard let selectedVariantID = variants[safeIndex: index]?.id else { return }
+        selectedID = selectedVariantID
         
-        needSetupSelection?(selectedIndex)
-        let text = variants[safeIndex: selectedIndex]?.text ?? ""
-        delegate?.showDescriprion(type: .selector, message: "Выбран вариант \"\(text)\"")
-    }
-    
-    // MARK: - Private methods
-    
-    private func getSelectedIndex(byID id: Int) -> Int? {
-        variants.firstIndex { $0.id == id }
+        if let selectedIndex = selectedIndex {
+            needSetupSelection?(selectedIndex)
+        }
+        
+        let text = variants.first(where: { $0.id == selectedID})?.text
+        delegate?.showDescriprion(type: .selector, message: "Выбран вариант \"\(text ?? "")\"")
     }
 }
