@@ -44,7 +44,7 @@ final class NetworkService: NetworkServiceProtocol {
         }
     }
     
-    func fetchDataWithCombine(completion: @escaping (Result<DataModel, Error>) -> Void) {
+    func fetchDataWithCombine<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared
             .dataTaskPublisher(for: url)
             .tryMap { data, response in
@@ -54,11 +54,16 @@ final class NetworkService: NetworkServiceProtocol {
                 }
                 return data
             }
-            .decode(type: DataModel.self, decoder: JSONDecoder())
-            .sink(receiveCompletion: {
-                print ("Received completion: \($0).")
-            }, receiveValue: { dataModel in
-                completion(.success(dataModel))
+            .decode(type: T.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { result in
+                switch result {
+                case .finished:
+                    break
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }, receiveValue: { data in
+                completion(.success(data))
             })
             .store(in: &subsciptions)
     }
