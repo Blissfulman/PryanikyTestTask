@@ -44,7 +44,13 @@ final class NetworkService: NetworkServiceProtocol {
         }
     }
     
-    func fetchDataWithCombine<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
+    func fetchDataWithCombine(completion: @escaping (Result<DataModel, Error>) -> Void) {
+        fetchData(forURL: url, completion: completion)
+    }
+    
+    // MARK: - Private methods
+    
+    private func fetchData<T: Decodable>(forURL url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared
             .dataTaskPublisher(for: url)
             .tryMap { data, response in
