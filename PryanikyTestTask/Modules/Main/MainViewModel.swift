@@ -32,7 +32,7 @@ final class MainViewModel: MainViewModelProtocol {
             dataDidUpdate?()
         }
     }
-    private let networkService: NetworkServiceProtocol = NetworkService()
+    private let networkService: NetworkServiceProtocol = NetworkService.shared
     
     // MARK: - Initializers
     
@@ -62,7 +62,7 @@ final class MainViewModel: MainViewModelProtocol {
     // MARK: - Private methods
     
     private func getData() {
-        networkService.fetchViewData { [weak self] result in
+        networkService.fetchDataWithCombine { [weak self] result in
             switch result {
             case .success(let dataModel):
                 self?.blocks = dataModel.allBlocks
