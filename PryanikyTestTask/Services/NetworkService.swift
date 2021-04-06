@@ -51,8 +51,7 @@ final class NetworkService: NetworkServiceProtocol {
     // MARK: - Private methods
     
     private func fetchData<T: Decodable>(forURL url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        URLSession.shared
-            .dataTaskPublisher(for: url)
+        URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { data, response in
                 guard let httpResponse = response as? HTTPURLResponse,
                       httpResponse.statusCode == 200 else {
@@ -61,16 +60,16 @@ final class NetworkService: NetworkServiceProtocol {
                 return data
             }
             .decode(type: T.self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { result in
+            .sink { result in
                 switch result {
                 case .finished:
                     break
                 case .failure(let error):
                     completion(.failure(error))
                 }
-            }, receiveValue: { data in
+            } receiveValue: { data in
                 completion(.success(data))
-            })
+            }
             .store(in: &subsciptions)
     }
 }
